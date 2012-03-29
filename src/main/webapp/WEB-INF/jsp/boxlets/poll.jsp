@@ -19,7 +19,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib tagdir="/WEB-INF/tags" prefix="lor" %>
 
-  <c:url value="/polls/" var="main_url"/>
+  <c:url value="/polls/" var="main_url" context="/" />
   <h2><a href="${main_url}">Опрос</a></h2>
 
   <div class="boxlet_content">
@@ -28,7 +28,7 @@
     <lor:poll-form poll="${poll}" enabled="true"/>
 
     <br>
-    <c:url value="/view-vote.jsp" var="vote_url">
+    <c:url value="/view-vote.jsp" var="vote_url" context="/">
       <c:param name="vote" value="${poll.id}"/>
     </c:url>
     <c:if test="${poll.multiSelect}">
@@ -40,5 +40,5 @@
     <br>
     <a href="${main_url}">итоги прошедших опросов...</a>
     <br>
-    [<a href="<c:url value="/add.jsp?group=19387"/>">добавить опрос</a>]
+    [<a href="<c:url value="/add.jsp?group=19387" context="/" />">добавить опрос</a>]
   </div>
