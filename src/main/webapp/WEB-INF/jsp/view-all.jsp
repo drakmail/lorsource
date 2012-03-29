@@ -39,7 +39,7 @@
 <title>Просмотр неподтвержденных сообщений - <%= section==null?"Все":section.getName() %></title>
 <jsp:include page="/WEB-INF/jsp/header.jsp"/>
 
-  <c:url var="urlFilterHandler" value="view-all.jsp" />
+  <c:url context="/" var="urlFilterHandler" value="view-all.jsp" />
   <form action="${urlFilterHandler}">
 
   <div class=nav>
@@ -50,7 +50,7 @@
     <div class="nav-buttons">
       <ul>
       <li><a href="rules.jsp">Правила форума</a></li>
-      <li><a href="<c:url value="tags"/>">Метки</a></li>
+      <li><a href="<c:url context="/" value="tags"/>">Метки</a></li>
       </ul>
       <select name="section" onChange="submit();" title="Быстрый переход">
         <option value="0">Все</option>

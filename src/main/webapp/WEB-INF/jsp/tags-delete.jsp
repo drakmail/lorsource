@@ -61,7 +61,7 @@
     Удаление метки
   </div>
 </div>
-<c:url var="delete_url" value="/tags/delete">
+<c:url context="/" var="delete_url" value="/tags/delete">
   <c:param name="firstLetter" value="${firstLetter}"/>
 </c:url>
  <form:form modelAttribute="tagRequestDelete" method="POST" action="${delete_url}" enctype="multipart/form-data" >
@@ -71,7 +71,7 @@
   Метка. которой нужно заменить удаляемую (пусто - удалить без замены):<br />
   <form:input id="tagName" path="tagName" cssClass="required" style="width: 40em" /><br />
   <input type="submit" value="Удалить" />
-  <c:url var="list_url" value="/tags/${firstLetter}" />
+  <c:url context="/" var="list_url" value="/tags/${firstLetter}" />
   <input type="button" value="Отменить" onClick="window.location='${list_url}';" />
 </form:form>
 

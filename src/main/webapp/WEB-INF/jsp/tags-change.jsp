@@ -27,7 +27,7 @@
     Изменение метки
   </div>
 </div>
-<c:url var="change_url" value="/tags/change">
+<c:url context="/" var="change_url" value="/tags/change">
   <c:param name="firstLetter" value="${firstLetter}"/>
 </c:url>
 <form:form modelAttribute="tagRequestChange" method="POST" action="${change_url}" enctype="multipart/form-data" >
@@ -36,7 +36,7 @@
   Старое название: ${tagRequestChange.oldTagName}<br />
   Название: <form:input path="tagName" cssClass="required" style="width: 40em" /><br />
   <input type="submit" value="Изменить" />
-  <c:url var="list_url" value="/tags/${firstLetter}" />
+  <c:url context="/" var="list_url" value="/tags/${firstLetter}" />
   <input type="button" value="Отменить" onClick="window.location='${list_url}';" />
 </form:form>
 

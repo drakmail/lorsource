@@ -37,7 +37,7 @@ ${status.first ? '' : ', '}
       <span>${firstLetter}</span>
     </c:when>
     <c:otherwise>
-      <c:url var="tagLetterUrl" value="/tags/${firstLetter}" />
+      <c:url context="/" var="tagLetterUrl" value="/tags/${firstLetter}" />
       <a href="${tagLetterUrl}">${firstLetter}</a>
     </c:otherwise>
   </c:choose>
@@ -51,7 +51,7 @@ ${status.first ? '' : ', '}
       <li>
         <c:choose>
           <c:when test="${tag.value != 0}">
-            <c:url value="/view-news.jsp" var="tag_url">
+            <c:url context="/" value="/view-news.jsp" var="tag_url">
                 <c:param name="tag" value="${tag.key}"/>
             </c:url>
             <a href="${fn:escapeXml(tag_url)}">${tag.key}</a>
@@ -64,13 +64,13 @@ ${status.first ? '' : ', '}
         (${tag.value})
         <c:if test="${isModeratorSession}">
           <span class="action-buttons">
-              <c:url var="edit_url" value="/tags/change">
+              <c:url context="/" var="edit_url" value="/tags/change">
                 <c:param name="firstLetter" value="${currentLetter}"/>
                 <c:param name="tagName" value="${tag.key}"/>
               </c:url>
               [<a href="${edit_url}">Изменить</a>]
 
-              <c:url var="delete_url" value="/tags/delete">
+              <c:url context="/" var="delete_url" value="/tags/delete">
                 <c:param name="firstLetter" value="${currentLetter}"/>
                 <c:param name="tagName" value="${tag.key}"/>
               </c:url>

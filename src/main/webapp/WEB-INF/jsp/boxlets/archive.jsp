@@ -19,12 +19,12 @@
 <%@ taglib prefix="lor" uri="http://www.linux.org.ru" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 <fmt:setLocale value="ru" scope="session"/>
-<c:url var="head_url" value="/news/"/>
+<c:url context="/" var="head_url" value="/news/"/>
 <h2><a href="${head_url}">Архив Новостей</a></h2>
 
 <div class="boxlet_content">
   <c:forEach var="item" items="${items}">
-    <c:url value="/news/archive/${item.year}/${item.month}" var="item_url"/>
+    <c:url context="/" value="/news/archive/${item.year}/${item.month}" var="item_url"/>
     <fmt:parseDate var="item_date" value="${item.year} ${item.month}" pattern="yyyy M"/>
     <a href="${fn:escapeXml(item_url)}"><fmt:formatDate value="${item_date}" pattern="yyyy MMMM"/>
       (${item.count})</a> <br>

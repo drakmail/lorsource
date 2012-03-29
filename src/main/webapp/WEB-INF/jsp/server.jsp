@@ -78,7 +78,7 @@
   <ul>
 <c:forEach var="user" items="${moderators}">
   <li>
-    <c:url var="whois" value="/people/${user.nick}/profile"/>
+    <c:url context="/" var="whois" value="/people/${user.nick}/profile"/>
     <a href="${whois}"><c:out escapeXml="true" value="${user.name}"/></a> (<c:out escapeXml="true" value="${user.nick}"/>)
   </li>
 </c:forEach>
@@ -89,7 +89,7 @@
   <ul>
     <c:forEach var="user" items="${correctors}">
       <li>
-        <c:url var="whois" value="/people/${user.nick}/profile"/>
+        <c:url context="/" var="whois" value="/people/${user.nick}/profile"/>
         <c:choose>
             <c:when test="${not empty user.name}">
                 <a href="${whois}"><c:out escapeXml="true" value="${user.name}"/></a> (<c:out escapeXml="true" value="${user.nick}"/>)

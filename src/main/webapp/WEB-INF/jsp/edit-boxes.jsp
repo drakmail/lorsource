@@ -40,12 +40,12 @@
           <c:forEach items="${boxes}" var="box" varStatus="status">
             <div class="boxlet">
               <c:import url="/${box}.boxlet"/>
-              <c:url var="add_url" value="/add-box.jsp">
+              <c:url context="/" var="add_url" value="/add-box.jsp">
                 <c:param name="tag" value="left"/>
                 <c:param name="pos" value="${status.index}"/>
               </c:url>
 
-              <c:url var="remove_url" value="/remove-box.jsp">
+              <c:url context="/" var="remove_url" value="/remove-box.jsp">
                 <c:param name="tag" value="left"/>
                 <c:param name="pos" value="${status.index}"/>
               </c:url>
@@ -59,7 +59,7 @@
             </div>
           </c:forEach>
         </lor:boxlets>
-        <c:url var="add_url" value="/add-box.jsp">
+        <c:url context="/" var="add_url" value="/add-box.jsp">
           <c:param name="tag" value="left"/>
         </c:url>
         [<a href="${add_url}">Добавить</a>]
@@ -78,12 +78,12 @@
             <c:forEach items="${boxes}" var="box" varStatus="status">
               <div class="boxlet">
                 <c:import url="/${box}.boxlet"/>
-                <c:url var="add_url" value="/add-box.jsp">
+                <c:url context="/" var="add_url" value="/add-box.jsp">
                   <c:param name="tag" value="right"/>
                   <c:param name="pos" value="${status.index}"/>
                 </c:url>
 
-                <c:url var="remove_url" value="/remove-box.jsp">
+                <c:url context="/" var="remove_url" value="/remove-box.jsp">
                   <c:param name="tag" value="right"/>
                   <c:param name="pos" value="${status.index}"/>
                 </c:url>
@@ -97,7 +97,7 @@
               </div>
             </c:forEach>
           </lor:boxlets>
-          <c:url var="add_url" value="/add-box.jsp">
+          <c:url context="/" var="add_url" value="/add-box.jsp">
             <c:param name="tag" value="right"/>
           </c:url>
           [<a href="${add_url}">Добавить</a>]

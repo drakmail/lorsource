@@ -30,7 +30,7 @@
           <li id="loginGreating">
             <c:if test="${template.sessionAuthorized}">
               добро пожаловать,&nbsp;
-              <c:url var="userUrl" value="/people/${template.nick}/profile"/>
+              <c:url context="/" var="userUrl" value="/people/${template.nick}/profile"/>
               <a style="text-decoration: none" href="${userUrl}">${template.nick}</a>
               [<a href="logout.jsp?sessionId=<%= session.getId() %>" title="Выйти">x</a>]
             </c:if>

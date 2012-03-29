@@ -48,7 +48,7 @@
     <ul>
       <c:forEach items="${filterItems}" var="f">
         <li>
-          <c:url var="fUrl" value="/tracker.jsp">
+          <c:url context="/" var="fUrl" value="/tracker.jsp">
             <c:if test="${not f.default}">
               <c:param name="filter">${f.value}</c:param>
             </c:if>

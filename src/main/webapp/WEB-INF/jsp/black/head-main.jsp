@@ -69,7 +69,7 @@
 
 <div style="right: 5px; text-align: right; top: 5px; position: absolute" class="head">
 <c:if test="${template.sessionAuthorized}">
-  <c:url var="userUrl" value="/people/${template.nick}/profile"/>
+  <c:url context="/" var="userUrl" value="/people/${template.nick}/profile"/>
   добро пожаловать, <a style="text-decoration: none" href="${userUrl}">${template.nick}</a>
   [<a href="logout.jsp?sessionId=<%= session.getId() %>" title="Выйти">x</a>]
   <%--<br>--%>

@@ -24,7 +24,7 @@
     <c:forEach var="item" items="${items}">
       <div style="margin-bottom: 1em">
       <div align="center">
-        <c:url var="url" value="${item.link}"/>
+        <c:url context="/" var="url" value="${item.link}"/>
         <a href="${url}">
           <c:choose>
             <c:when test="${not empty item.info}">
@@ -45,7 +45,7 @@
             [bad image]
           </c:otherwise>
         </c:choose>
-        <c:url value="/people/${item.nick}/profile" var="nickurl"/>
+        <c:url context="/" value="/people/${item.nick}/profile" var="nickurl"/>
       </i> ${item.title} от <a href="${nickurl}">${item.nick}</a> (${item.stat})
       </div>
     </c:forEach>
