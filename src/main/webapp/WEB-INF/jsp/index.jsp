@@ -26,7 +26,7 @@
 <% Template tmpl = Template.getTemplate(request); %>
 <jsp:include page="/WEB-INF/jsp/head.jsp"/>
 
-<title>LINUX.ORG.RU - Русская информация об ОС Linux</title>
+<title>Русская информация об ОС Linux</title>
 <META NAME="Keywords" CONTENT="linux линукс операционная система документация gnu бесплатное свободное програмное обеспечение софт unix юникс software free documentation operating system новости news">
 <META NAME="Description" CONTENT="Все о Linux на русском языке">
 <LINK REL="alternate" TITLE="L.O.R RSS" HREF="section-rss.jsp?section=1" TYPE="application/rss+xml">
@@ -50,23 +50,6 @@
 <div style="clear: both"></div>
 <div class="<%= columns3?"newsblog2":"newsblog"%>">
   <div class="<%= columns3?"newsblog-in2":"newsblog-in"%>">
-
-<c:if test="${template.style != 'black'}">
-  <div class="infoblock" style="border: 1px solid #777; text-align: justify;">
-    <a rel="nofollow" href="http://job.samsung.ru/"><img width="130" height="43" src="/adv/Samsung_Logo.png" alt="" style="float: left; border: 0; padding-right: 5px"></a>
-    <div id="samsung_text">
-    SAMSUNG Electronics&nbsp;&mdash; мировой лидер в&nbsp;производстве полупроводников,
-    телекоммуникационного оборудования и&nbsp;цифровой конвергенции&nbsp;&mdash;
-    объявляет о&nbsp;приеме на&nbsp;работу инженеров-программистов,
-    разработчиков в&nbsp;исследовательские центры компании в&nbsp;Южной Корее:
-    Cloud Computing, Cryptography&nbsp;/ Encryption, Security Software, Multimedia
-    (TV, BD, PVR, HTS), Linux Kernel, Android, C/C++ Programming, Widget,
-    DRM, Network Software, LTE eNB Software Design, Modem ASIC, FPGA, SoC.
-    Дополнительная информация:
-    <a href="http://job.samsung.ru/" rel="nofollow" style="color: white">http://job.samsung.ru</a>
-    </div>
-  </div>
-</c:if>
 
 <c:if test="${template.moderatorSession or template.correctorSession}">
 <div class="nav"   style="border-bottom: none">

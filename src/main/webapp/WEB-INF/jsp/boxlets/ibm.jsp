@@ -14,6 +14,7 @@
   --%>
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<!--
 <h2>Новые материалы на IBM developerWorks</h2>
 <div class="boxlet_content">
   <iframe src="dw.jsp?height=400&amp;width=219&amp;main=1" width="222" height="400" scrolling="no"
@@ -22,3 +23,4 @@
   <a rel="nofollow" style="text-decoration: underline" href="http://www.ibm.com/developerworks/mydeveloperworks/?lang=ru" title="">Вступай</a> в сообщество профессионалов&nbsp;IBM!<br>
 Нас уже более 3000 только в России.
 </div>
+-->

@@ -82,15 +82,14 @@
 
 
   <rule>
-    <condition name="host" operator="notequal">^www\.linux\.org\.ru</condition>
-    <condition name="host" operator="notequal">^beta\.linux\.org\.ru</condition>
-    <condition name="host" operator="notequal">^test-lor</condition>
+    <condition name="host" operator="notequal">^delta-z.ru</condition>
     <condition name="host" operator="notequal">^localhost</condition>
-    <condition name="host" operator="notequal">^10.0.2.2</condition>  
-    <condition name="host" operator="notequal">^127.0.0.1</condition>  
+    <condition name="host" operator="notequal">^new.d-hc.ru</condition>
+    <condition name="host" operator="notequal">^www.new.d-hc.ru</condition>
+    <condition name="host" operator="notequal">^127.0.0.1</condition>
     <condition name="host" operator="notequal">^$</condition>
     <from>^/(.*)</from>
-    <to type="redirect" last="true">%{scheme}://www.linux.org.ru/$1</to>
+    <to type="redirect" last="true">%{scheme}://new.d-hc.ru/$1</to>
   </rule>
 
   <rule>

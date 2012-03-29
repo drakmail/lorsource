@@ -5,3 +5,4 @@ target
 *.ipr
 *.iws
 .idea
+/src/kissed/nbproject/private/

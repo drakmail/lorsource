@@ -14,8 +14,10 @@
   --%>
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<!--
 <h2>Футболки linux.org.ru</h2>
 <div class="boxlet_content">
   <a href="/view-message.jsp?msgid=3989453"><img src="/adv/tshirt.jpg" width="150" height="150"> </a><br>
   <a href="/view-message.jsp?msgid=3989453">Заказ футболки Linux.org.ru</a>
 </div>
+-->
